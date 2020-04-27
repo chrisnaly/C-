@@ -1,0 +1,46 @@
+﻿@model User
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center"> Register to this cool site! </h1>
+        <a style="float:right" href="/login"> Login </a>
+        <br><br>
+        <form asp-action="Register" asp-controller="Home" method="POST">
+            <div class="form-group">
+                <p class="text-danger"> <span asp-validation-for="FirstName"></span> </p>
+                <label asp-for="FirstName"> First Name: </label>
+                <input asp-for="FirstName" class="form-control">
+            </div>
+            <div class="form-group">
+                <p class="text-danger"> <span asp-validation-for="LastName"></span> </p>
+                <label asp-for="LastName"> Last Name: </label>
+                <input asp-for="LastName" class="form-control">
+            </div>
+            <div class="form-group">
+                <p class="text-danger"> <span asp-validation-for="Email"></span> </p>
+                <label asp-for="Email"> Email: </label>
+                <input asp-for="Email" class="form-control">
+            </div>
+            <div class="form-group">
+                <p class="text-danger"> <span asp-validation-for="Password"></span> </p>
+                <label asp-for="Password"> Password: </label>
+                <input asp-for="Password" class="form-control">
+            </div>
+            <div class="form-group">
+                <p class="text-danger"> <span asp-validation-for="Confirm"></span> </p>
+                <label asp-for="Confirm"> Confirm Password: </label>
+                <input asp-for="Confirm" class="form-control">
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-sm"> Sign up Now </button>
+        </form>
+    </div>
+</body>
+</html>

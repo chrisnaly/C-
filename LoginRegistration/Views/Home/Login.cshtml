@@ -1,0 +1,32 @@
+@model LoginUser
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1> Login </h1>
+        <a href="/" style="float:right"> Register </a>
+        <br><br>
+
+        <form asp-action="LoginProcess" asp-controller="Home" method="POST">
+            <div class="form-group">
+                <p class="text-danger"> <span asp-validation-for="Email"></span> </p>
+                <label asp-for="Email"></label>
+                <input asp-for="Email" class="form-control">
+            </div>
+            <div class="form-group">
+                <p class="text-danger"> <span asp-validation-for="Password"></span> </p>
+                <label asp-for="Password"></label>
+                <input asp-for="Password" class="form-control">
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-sm"> Login </button>
+        </form>
+    </div>
+</body>
+</html>
